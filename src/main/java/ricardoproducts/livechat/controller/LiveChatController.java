@@ -10,9 +10,10 @@ import ricardoproducts.livechat.damain.ChatOutPut;
 @Controller
 public class LiveChatController {
 
+
     @MessageMapping("/new-message")
     @SendTo("/topics/livechat")
-    public ChatOutPut newMessage(ChatInPut inPut) {
-        return new ChatOutPut(HtmlUtils.htmlEscape(inPut.user() + ": " + inPut.message()));
+    public ChatOutPut newMessage(ChatInPut input) {
+        return new ChatOutPut(HtmlUtils.htmlEscape(input.user() + ": " + input.message()));
     }
 }

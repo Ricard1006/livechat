@@ -1,4 +1,4 @@
 package ricardoproducts.livechat.damain;
 
-public record ChatOutPut(String message) {
+public record ChatOutPut(String content) {
 }
